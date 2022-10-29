@@ -3,7 +3,7 @@
 <p>{{ .Content }}</p>
 <ul>
     {{ range .Pages.ByPublishDate.Reverse }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> - <time>{{ .PublishDate.Format "January 2, 2006" }}</time></li>
     {{ end }}
 </ul>
 {{ end }}
